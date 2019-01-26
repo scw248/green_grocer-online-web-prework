@@ -26,7 +26,7 @@ def apply_coupons(consolidated_hash, coupon)
         items.each do |item|
           
           if val == item
-            consolidated_hash["#{item} W/COUPON"]
+            consolidated_hash["#{item} W/COUPON"] 
           end
         end
       end
