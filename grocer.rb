@@ -22,7 +22,7 @@ def apply_coupons(consolidated_hash, coupon)
     things.each do |thing, val|
       
       
-      consolidated_hash.each do |items|
+      consolidated_hash.each do |item, attributes|
         items.each do |item, attributes|
 
           if val == item
