@@ -1,15 +1,38 @@
-def consolidate_cart(cart)
-  # code here
+require "pry"
+
+def consolidate_cart(array)
+  consolidated_hash = {}
+  
+  array.each do |items|
+    items.each do |item, attributes|
+      if !consolidated_hash[item]
+        consolidated_hash[item] = attributes
+        consolidated_hash[item][:count] = 1
+      else
+        consolidated_hash[item][:count] += 1
+        #binding.pry
+      end
+    end
+  end
+  consolidated_hash
 end
 
-def apply_coupons(cart, coupons)
-  # code here
+def apply_coupons(consolidated_hash, coupon)
+  coupon.each do |things|
+    things.each do |thing, val|
+      
+      consolidated_hash.each do |items|
+        items.each do |item|
+          
+          if val == item
+            consolidated_hash["#{item} W/COUPON"]
+        end
+      end
+    end
+  end
+  consolidated_hash
 end
 
-def apply_clearance(cart)
-  # code here
+def checkout
 end
 
-def checkout(cart, coupons)
-  # code here
-end
