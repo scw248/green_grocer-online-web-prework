@@ -20,6 +20,7 @@ end
 def apply_coupons(consolidated_hash, coupon)
   coupon.each do |things|
     things.each do |thing, val|
+      binding.pry
       
       consolidated_hash.each do |items|
         items.each do |item|
