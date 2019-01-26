@@ -27,10 +27,11 @@ def apply_coupons(consolidated_hash, coupon)
           
           if val == item
             consolidated_hash["#{item} W/COUPON"]
+          end
         end
       end
     end
-  end
+end
   consolidated_hash
 end
 
