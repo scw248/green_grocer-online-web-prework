@@ -23,7 +23,7 @@ def apply_coupons(consolidated_hash, coupon)
       
       
       consolidated_hash.each do |item, attributes|
-        items.each do |item, attributes|
+        attributes.each do |item, attributes|
 
           if val == item
             binding.pry
